@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="centered">
+        <p>Войти</p>
+        <form action="{% url 'blog:login' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if is_login_or_password_invalid %}
+            <p class="error">Неправильный логин или пароль</p>
+            {% endif %}
+            <input type="submit" value="Вход">
+        </form>
+    </div>
+{% endblock %}

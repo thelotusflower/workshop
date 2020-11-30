@@ -1,0 +1,26 @@
+body {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+header {
+    margin-bottom: 10px;
+}
+
+.pull-right {
+    float: right;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+.error {
+    color: red;
+}
+
+#id_sections {
+    width: 500px;
+    height: 200px;
+}

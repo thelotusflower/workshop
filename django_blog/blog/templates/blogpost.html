@@ -1,0 +1,8 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>{{ blog_post.name }}</h1>
+    <h2>{{ blog_post.short_description }}</h2>
+    <p>{{ blog_post.text }}</p>
+    <p>Автор: {{ blog_post.author.username }}</p>
+{% endblock %}
