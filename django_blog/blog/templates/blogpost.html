@@ -2,7 +2,9 @@
 
 {% block content %}
     <h1>{{ blog_post.name }}</h1>
-    <h2>{{ blog_post.short_description }}</h2>
+    {% if blog_post.short_description %}
+        <h2>{{ blog_post.short_description }}</h2>
+    {% endif %}
     <p>{{ blog_post.text }}</p>
     <p>Автор: {{ blog_post.author.username }}</p>
 {% endblock %}

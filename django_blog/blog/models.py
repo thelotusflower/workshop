@@ -24,10 +24,10 @@ class BlogSection(models.Model):
 
 
 class BlogPost(models.Model):
-    name = models.CharField(max_length=100, verbose_name='Название поста')
+    name = models.CharField(max_length=100, verbose_name='Название публикации')
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name='Создатель поста')
     text = models.TextField(verbose_name='Текст поста')
-    slug = models.SlugField(verbose_name='Название поста в ссылке', allow_unicode=True, unique=True) 
+    slug = models.SlugField(verbose_name='Название поста в ссылке', allow_unicode=True, unique=True)
     short_description = models.CharField(
         max_length=100,
         null=True,
@@ -48,6 +48,9 @@ class BlogPost(models.Model):
             self.slug = slugify(self.name)
 
         super().save(force_insert, force_update, using, update_fields)
+
+    def __str__(self):
+        return f'{self.name} | {self.author.username}'
 
 
 class Tag(models.Model):
