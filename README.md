@@ -2,7 +2,7 @@
 ## Записи 
 
 * [Часть 1](https://www.youtube.com/watch?v=G-7T5Z5lQ84&feature=youtu.be)
-* Часть 2
+* [Часть 2](https://www.youtube.com/watch?v=1oPErRxx_aE&feature=youtu.be)
 
 ## Запуск проекта 
 
